@@ -7,11 +7,10 @@ if (!TARGET_URL) {
 }
 
 export async function middleware(request: NextRequest) {
-  // Skip middleware only for static assets and Next.js internal routes
+  // Skip middleware only for Next.js internal routes
   if (
     request.nextUrl.pathname.startsWith('/_next') ||
-    request.nextUrl.pathname.startsWith('/static') ||
-    request.nextUrl.pathname.includes('.')
+    request.nextUrl.pathname.startsWith('/static')
   ) {
     return NextResponse.next()
   }
