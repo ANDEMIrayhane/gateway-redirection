@@ -1,10 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs",
-  "env": {
-    "TARGET_URL": {
-      "description": "The target backend URL to proxy requests to"
-    }
-  }
+  "framework": "nextjs"
 }
